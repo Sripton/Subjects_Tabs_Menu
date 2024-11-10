@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --subject-container: 120rem;
+  --primary: hsl(201.43, 13.21%, 58.43%);
+  --white: hsl(0, 0%, 100%);
+  --white-light: hsl(0, 0%, 99%);
+  --box-shadow: hsl(220, 7.32%, 91.96%);
+}
+/* html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: Rubik, sans-serif;
+  background: var(--box-shadow);
+}
+.subject-container {
+  max-width: var(--subject-container);
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+  top: 200px;
+}
+.tab-container {
+  width: 70%;
+  margin: 0 auto 3rem auto;
+  box-shadow: 0 0.8rem 1rem var(--box-shadow);
+}
+@media (max-width: 765px) {
+  .tab-container {
+    width: 90%;
+  }
+}
+.tab-filter-container {
+  padding: 2rem;
+  text-align: center;
+  background: hsl(205.71, 30.43%, 95.49%);
+}
+.filter-btn {
+  list-style-type: none;
+  display: inline-flex;
+  padding: 0.8rem 2.5rem;
+  cursor: pointer;
+  border-radius: 2rem;
+  align-items: center;
+  font-weight: 500;
+  gap: 0.5rem;
+}
+.filter-btn.active-btn {
+  background: var(--primary);
+  color: var(--white);
+}
+.tab-filter-item-container {
+  background: var(--white);
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  height: 30rem;
+}
+.tab-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0rem 3rem;
+  transform: translateY(100%);
+  background: var(--white);
+  transition: transform 0.5s ease-in-out;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
+  place-items: center start;
+}
+.tab-item.select-tab {
+  transform: translateY(0);
+  transition: transform 0.5s ease-in-out;
+  background: var(--white-light);
+  animation: feadIN 0.6s ease-in-out;
+}
+@keyframes feadIN {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.tab-img {
+  width: 30rem;
+} */
+
+html {
+  font-size: 75%; /* Increase by 20% */
+}
+
+body {
+  font-size: 1.92rem; /* 1.6rem * 1.2 */
+  font-family: Rubik, sans-serif;
+  background: var(--box-shadow);
+}
+
+.subject-container {
+  max-width: calc(var(--subject-container) * 1.2); /* Increase by 20% */
+  margin: 0 auto;
+  padding: 0 1.2rem; /* 1rem * 1.2 */
+  position: relative;
+  top: 240px; /* 200px * 1.2 */
+}
+
+.tab-container {
+  width: 84%; /* 70% * 1.2 */
+  margin: 0 auto 3.6rem auto; /* 3rem * 1.2 */
+  box-shadow: 0 0.96rem 1.2rem var(--box-shadow); /* Increase shadow sizes */
+}
+
+/* 
+  .tab-filter-container {
+    padding: 2.4rem;
+    text-align: center;
+    background: hsl(205.71, 30.43%, 95.49%);
+    overflow-x: auto;
+    user-select: none;
+    scroll-behavior: smooth;
+  } */
+
+.tab-filter-container {
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(45, 119, 124, 0.37);
+  border-radius: 50px;
+  white-space: nowrap;
+  overflow-x: auto;
+  padding: 10px;
+  margin-bottom: 50px;
+  background: hsl(205.71, 30.43%, 95.49%);
+  user-select: none;
+  scroll-behavior: smooth;
+}
+.tab-filter-container::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-btn {
+  list-style-type: none;
+  display: inline-flex;
+  padding: 0.96rem 3rem; /* 0.8rem and 2.5rem multiplied by 1.2 */
+  cursor: pointer;
+  border-radius: 2.4rem; /* 2rem * 1.2 */
+  align-items: center;
+  font-weight: 500;
+  gap: 0.6rem; /* 0.5rem * 1.2 */
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+/* Пример для скрытия лишних элементов */
+.tab-filter-container.hidden-overflow {
+  overflow: hidden;
+  height: 150px; /* Пример фиксированной высоты */
+}
+
+.filter-btn.active-btn {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.tab-filter-item-container {
+  background: var(--white);
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.tab-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0rem 3.6rem; /* 3rem * 1.2 */
+  transform: translateY(100%);
+  background: var(--white);
+  transition: transform 0.5s ease-in-out;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(34.8rem, 1fr));
+  place-items: center start;
+}
+
+.tab-item.select-tab {
+  transform: translateY(0);
+  transition: transform 0.5s ease-in-out;
+  background: var(--white-light);
+  animation: feadIN 0.6s ease-in-out;
+}
+
+.info {
+  position: relative;
+  top: 50px;
+  display: flex;
+  transform: translateX(200px);
+  z-index: 2;
+}
+
+.info-icon {
+  font-size: 3rem;
+  padding: 0.96rem 3rem;
+  cursor: pointer;
+}
+@media (max-width: 765px) {
+  .subject-container {
+    max-width: 100%; /* Увеличиваем до 100% */
+    padding: 0 1rem; /* Уменьшаем отступы */
+    top: 120px; /* Снижаем позиционирование */
+  }
+
+  .tab-container {
+    width: 100%; /* Расширяем до 100% */
+    margin: 0 auto 2.4rem auto; /* Уменьшаем нижний отступ */
+    box-shadow: 0 0.6rem 0.8rem var(--box-shadow); /* Уменьшаем тень */
+  }
+
+  .tab-filter-container {
+    padding: 1.6rem; /* Уменьшаем отступы */
+  }
+
+  .filter-btn {
+    padding: 0.8rem 2rem; /* Уменьшаем внутренние отступы */
+    font-size: 1.4rem; /* Уменьшаем размер шрифта */
+    border-radius: 1.6rem; /* Уменьшаем радиус скругления */
+  }
+
+  .tab-item {
+    padding: 0rem 2rem; /* Уменьшаем боковые отступы */
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(25rem, 1fr)
+    ); /* Уменьшаем минимальный размер колонок */
+  }
+
+  .info {
+    flex-direction: column; /* Вертикальное расположение для мобильных */
+    top: 20px; /* Уменьшаем отступ сверху */
+    transform: translateX(0); /* Убираем смещение по оси X */
+    align-items: center; /* Центрируем элементы */
+  }
+
+  .info-icon {
+    font-size: 2rem; /* Уменьшаем размер шрифта */
+    padding: 0.8rem 2rem; /* Уменьшаем внутренние отступы */
+  }
+}
+@keyframes feadIN {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.tab-img {
+  width: 50rem; /* 30rem * 1.2 */
+}
